@@ -1,0 +1,3 @@
+﻿name = "sereno-web-v2"
+compatibility_date = "2025-01-15"
+compatibility_flags = ["nodejs_compat"]
