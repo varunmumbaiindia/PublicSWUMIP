@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Sereno With You</title>
+  <meta name="description" content="Get in touch with Sereno With You. Email us, follow us on social, or join our community." />
+  <link rel="canonical" href="https://serenowithyou.com/contact" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Sereno With You" />
+  <meta property="og:description" content="Get in touch with Sereno With You. Email us, follow us on social, or join our community." />
+  <meta property="og:url" content="https://serenowithyou.com/contact" />
+  <meta property="og:image" content="https://serenowithyou.com/og/og-image-1200x630.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Sereno With You" />
+  <meta name="twitter:description" content="Get in touch with Sereno With You. Email us, follow us on social, or join our community." />
+  <meta name="twitter:image" content="https://serenowithyou.com/og/og-image-1200x630.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/og/og-image-1200x630.jpg" />
+  <style>
+    :root{--turq:#7FE3E2;--turq2:#3CC8C7;--mint:#DFF8F6;--ink:#0E3A3B;--ring:#E5F6F6;--shadow:0 10px 28px rgba(0,0,0,.10)}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 600px at 10% 10%, #fff 0%, var(--mint) 70%, #F4FFFD 100%);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1000px;margin:0 auto;padding:clamp(16px,4vw,40px)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .brand img{width:36px;height:36px;border-radius:8px;box-shadow:0 6px 12px rgba(0,0,0,.1)}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:#eef9f8;color:#0e3a3b;padding:10px 14px;border-radius:999px;font-weight:700;font-size:14px}
+    h1{font-size:clamp(28px,5vw,56px);margin:20px 0 12px}
+    p{color:#40696A;line-height:1.6;font-size:clamp(14px,1.8vw,18px);max-width:800px;margin:0 0 24px}
+    .contact-list{list-style:none;padding:0;margin:0;max-width:800px}
+    .contact-list li{margin-bottom:12px;font-size:16px;display:flex;align-items:center;gap:8px;color:#0E3A3B}
+    .contact-list li svg{width:20px;height:20px;fill:currentColor}
+    .social-links{display:flex;gap:12px;margin-top:12px}
+    .social-links a{background:#eef9f8;color:#0e3a3b;padding:10px 14px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none}
+    footer{text-align:center;color:#6a8c8c;font-size:12px;margin:22px 0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Updated logo path points to the shared assets folder -->
+      <div class="brand"><img src="assets/logo.png" alt="Sereno logo"><span>Sereno</span></div>
+      <nav>
+        <a class="chip" href="index.html">Home</a>
+        <a class="chip" href="coaches.html">Coaches</a>
+        <a class="chip" href="about.html">About</a>
+        <a class="chip" href="events.html">Events</a>
+      </nav>
+    </header>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Whether you have questions, feedback, or collaboration ideas, feel free to reach out.</p>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:hello@serenowithyou.com">hello@serenowithyou.com</a></li>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/sereno.with.you" target="_blank" rel="noopener">@sereno.with.you</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/sereno-with-you" target="_blank" rel="noopener">Sereno With You</a></li>
+    </ul>
+    <p>You can also follow us on social media for updates on product launches, events, and wellness tips.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/sereno.with.you" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/sereno-with-you" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <footer>© <span id="year"></span> Sereno With You • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

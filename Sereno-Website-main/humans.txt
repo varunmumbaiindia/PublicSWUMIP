@@ -1,0 +1,4 @@
+Team: Sereno With You
+Site: https://serenowithyou.com
+Contact: hello@serenowithyou.com
+Purpose: Mental health & wellness platform with AI coaching and expert sessions.

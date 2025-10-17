@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--
+    The title and description here are tuned for both search engines and social media previews.
+    They make clear what Sereno With You offers and include key phrases such as
+    "mental health", "wellness platform", and "AI coaching".
+  -->
+  <title>Sereno With You | Mental Health &amp; Wellness Platform</title>
+  <meta name="description" content="Sereno With You is a mental health &amp; wellness platform offering mood tracking, AI‑powered coaching, expert sessions, and a supportive community." />
+  <!-- Canonical URL tells search engines that this is the preferred version of the page -->
+  <link rel="canonical" href="https://serenowithyou.com/" />
+  <!-- Robots directives ensure search engines index and follow links on this page -->
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <!-- Favicons and PWA manifest -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Social share metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sereno With You" />
+  <meta property="og:url" content="https://serenowithyou.com/" />
+  <meta property="og:title" content="Sereno With You — Mental Health &amp; Wellness Platform" />
+  <meta property="og:description" content="Mood tracking, AI coaching, expert sessions, and a supportive community." />
+  <meta property="og:image" content="https://serenowithyou.com/og/og-image-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sereno With You — Mental Health &amp; Wellness Platform" />
+  <meta name="twitter:description" content="Mood tracking, AI coaching, expert sessions, and a supportive community." />
+  <meta name="twitter:image" content="https://serenowithyou.com/og/og-image-1200x630.jpg" />
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload the hero image to improve Largest Contentful Paint -->
+  <link rel="preload" as="image" href="/og/og-image-1200x630.jpg" />
+  <!-- Inline CSS retains the existing look and feel of Sereno's coming soon page -->
+  <style>
+    :root{
+      --sereno-turquoise:#7FE3E2; --sereno-turquoise-dark:#3CC8C7;
+      --sereno-mint:#DFF8F6; --sereno-ink:#0E3A3B; --ink-soft:#40696A;
+      --surface:#fff; --ring:#E5F6F6; --shadow:0 10px 28px rgba(0,0,0,.10); --r:20px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:radial-gradient(1200px 600px at 10% 10%, #ffffff 0%, var(--sereno-mint) 70%, #F4FFFD 100%);
+      color:var(--sereno-ink);
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{min-height:100dvh;display:grid;place-items:center;padding:clamp(16px,4vw,48px)}
+    .shell{width:min(100%,1100px);background:rgba(255,255,255,.86);border:1px solid var(--ring);border-radius:var(--r);box-shadow:var(--shadow);backdrop-filter:blur(6px);overflow:hidden;position:relative}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:clamp(16px, 2.4vw, 28px) clamp(18px,3vw,40px);flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .logo{width:36px;height:36px;border-radius:8px;object-fit:contain;box-shadow:0 6px 12px rgba(0,0,0,.1)}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:#eef9f8;color:#0e3a3b;padding:10px 14px;border-radius:999px;font-weight:700;font-size:14px}
+    .content{display:grid;gap:20px;padding:0 clamp(18px,3vw,40px) clamp(24px,6vw,64px)}
+    h1{margin:0;text-align:center;font-size:clamp(32px,6vw,72px);line-height:.98;letter-spacing:-.02em}
+    .lead{text-align:center;max-width:850px;margin:0 auto;color:var(--ink-soft);font-size:clamp(14px,1.8vw,18px);line-height:1.5}
+    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+    .cta{appearance:none;border:0;cursor:pointer;font-weight:800;padding:14px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .primary{background:linear-gradient(135deg,var(--sereno-turquoise),var(--sereno-turquoise-dark));color:#083b3d}
+    .secondary{background:#eef9f8;color:#0e3a3b}
+    footer{text-align:center;padding:18px;color:#6a8c8c;font-size:12px}
+
+    /* Countdown timer styles */
+    .countdown{display:flex;gap:10px;justify-content:center;margin:12px 0 20px}
+    .countdown .unit{background:#fff;border:1px solid var(--ring);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow);min-width:80px;text-align:center}
+    .countdown .unit strong{font-size:28px;display:block;font-weight:800;color:var(--sereno-ink)}
+    .countdown .unit span{font-size:12px;color:var(--ink-soft)}
+
+    /* Feature card styles */
+    .card{background:#fff;border:1px solid var(--ring);border-radius:var(--r);padding:20px;margin-top:18px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 6px;font-size:20px;color:var(--sereno-ink)}
+    .card p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.6}
+
+    /* Sign‑up form styles */
+    .signup-form{background:#fff;border:1px solid var(--ring);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);max-width:760px;width:100%;margin:20px auto 0}
+    .signup-form .form-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px}
+    .signup-form input[type="text"],.signup-form input[type="email"]{flex:1 1 calc(50% - 6px);padding:12px 14px;border:1px solid var(--ring);border-radius:8px;background:#f8fdfc;font-size:14px;color:var(--sereno-ink)}
+    .signup-form input::placeholder{color:var(--ink-soft)}
+    .signup-form label{font-size:14px;color:var(--ink-soft)}
+    .signup-form button[type="submit"]{margin-top:8px;width:100%}
+  </style>
+  <!-- Structured data for search engines and AI models -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sereno With You",
+    "url": "https://serenowithyou.com/",
+    "logo": "https://serenowithyou.com/assets/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/sereno.with.you",
+      "https://www.linkedin.com/company/sereno-with-you",
+      "https://twitter.com/sereno_with_you",
+      "https://github.com/sereno-with-you",
+      "https://producthunt.com/products/sereno-with-you",
+      "https://medium.com/@sereno.with.you"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "hello@serenowithyou.com",
+      "availableLanguage": ["en"]
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sereno With You",
+    "url": "https://serenowithyou.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://serenowithyou.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sereno With You",
+    "operatingSystem": "iOS, Android, Web",
+    "applicationCategory": "HealthApplication",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Sereno With You?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A mental wellness platform with mood tracking, AI coaching, expert sessions, and a supportive community."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Sereno With You free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Core features are free with optional premium upgrades and events."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contact support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email hello@serenowithyou.com or DM us on Instagram @sereno.with.you."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <main class="shell" role="main" aria-labelledby="headline">
+      <!-- Header with brand and navigation -->
+      <header>
+        <!-- Use an image from the new assets folder for the logo. Replace assets/logo.png with your own branded logo file -->
+        <div class="brand"><img src="assets/logo.png" class="logo" alt="Sereno logo" /><span>Sereno</span></div>
+        <nav>
+          <a class="chip" href="coaches.html">Coaches</a>
+          <a class="chip" href="about.html">About</a>
+          <a class="chip" href="events.html">Events</a>
+          <a class="chip" href="contact.html">Contact</a>
+        </nav>
+      </header>
+      <!-- Coming soon content -->
+      <section class="content">
+        <h1 id="headline">We are coming soon</h1>
+        <p class="lead" id="sublead" style="max-width:760px">We’re building a gentle space to help you breathe easier. Daily check ins, friendly guidance and trusted experts. If you found us in Leh you might have unlocked something special.</p>
+        <!-- Countdown timer -->
+        <div class="countdown" id="countdown">
+          <div class="unit"><strong>00</strong><span>Days</span></div>
+          <div class="unit"><strong>00</strong><span>Hours</span></div>
+          <div class="unit"><strong>00</strong><span>Minutes</span></div>
+          <div class="unit"><strong>00</strong><span>Seconds</span></div>
+        </div>
+        <!-- Feature cards -->
+        <div class="card"><h3>What you get</h3><p>Daily mood and habit check ins, short practices, a calm chat buddy and access to trusted experts. Rewards for your consistency.</p></div>
+        <div class="card"><h3>Why it matters</h3><p>Small friendly steps make it easy to begin and easier to continue.</p></div>
+        <div class="card"><h3>Be an early friend</h3><p>Follow us and join our first circle; your voice will help shape Sereno.</p></div>
+        <!-- Call to actions -->
+        <div class="cta-row" style="margin-top:20px">
+          <a class="cta primary" href="https://www.instagram.com/sereno.with.you" target="_blank" rel="noopener">Follow us now</a>
+          <a class="cta secondary" href="mailto:hello@serenowithyou.com?subject=I%27d%20love%20to%20connect">Write to us</a>
+        </div>
+        <p class="lead" style="text-align:center;font-size:14px;margin-top:6px">Email: <a href="mailto:hello@serenowithyou.com">hello@serenowithyou.com</a></p>
+        <!-- Sign up form -->
+        <form class="signup-form" action="mailto:hello@serenowithyou.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <input type="text" name="Full Name" placeholder="Full Name" required />
+            <input type="text" name="WhatsApp Number" placeholder="WhatsApp Number" />
+          </div>
+          <div class="form-row">
+            <input type="email" name="Email Address" placeholder="Email Address" required />
+            <input type="text" name="Instagram Handle" placeholder="Instagram handle used to follow" />
+          </div>
+          <div class="form-row">
+            <label><input type="checkbox" name="Followed on Instagram" /> I followed <strong>@sereno.with.you</strong> on Instagram</label>
+          </div>
+          <button type="submit" class="cta primary">Notify me when live</button>
+          <p style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:8px">We won't spam you. This information is only for launch updates and feedback.</p>
+        </form>
+      </section>
+      <footer>© <span id="year"></span> Sereno With You • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></footer>
+    </main>
+  </div>
+  <script>
+    // Update footer year
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+    // Countdown logic
+    (function(){
+      const cd = document.getElementById('countdown');
+      if (!cd) return;
+      const targetDate = new Date('2025-12-30T00:00:00');
+      function updateCountdown(){
+        const now = new Date();
+        let diff = targetDate - now;
+        if (diff < 0) diff = 0;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        const units = cd.querySelectorAll('.unit');
+        if (units.length >= 4) {
+          units[0].querySelector('strong').textContent = String(days).padStart(2,'0');
+          units[1].querySelector('strong').textContent = String(hours).padStart(2,'0');
+          units[2].querySelector('strong').textContent = String(minutes).padStart(2,'0');
+          units[3].querySelector('strong').textContent = String(seconds).padStart(2,'0');
+        }
+      }
+      updateCountdown();
+      setInterval(updateCountdown,1000);
+    })();
+  </script>
+</body>
+</html>
