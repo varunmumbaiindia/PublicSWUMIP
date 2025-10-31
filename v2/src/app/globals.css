@@ -87,3 +87,16 @@ html, body {
   border-color: var(--lavender);
   color: var(--lavender);
 }
+/* ---- Moving gradient aura for hero ---- */
+@keyframes auraMove {
+  0% { transform: translate3d(-2%, -2%, 0) scale(1); }
+  50% { transform: translate3d(2%, 2%, 0) scale(1.02); }
+  100% { transform: translate3d(-2%, -2%, 0) scale(1); }
+}
+.aura-motion {
+  animation: auraMove 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Small gap fix on <a> focus for neat outline */
+a:focus-visible { outline: 2px solid var(--lavender); outline-offset: 2px; border-radius: 10px; }
