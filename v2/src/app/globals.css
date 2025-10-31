@@ -6,13 +6,18 @@
    Sereno Brand System — Pastel Light Futuristic
    ------------------------------------------------- */
 :root {
+  /* Pastels from logo gradient */
   --mint: #A7E8E1;
   --lavender: #B8A7F8;
   --peach: #FFC6B9;
   --pink: #F8BBD0;
+
+  /* Neutrals */
   --white: #FFFFFF;
   --charcoal: #323539;
   --gray: #707277;
+
+  /* Layout */
   --radius: 1.5rem;
 }
 
@@ -20,7 +25,7 @@ html, body {
   height: 100%;
   background: linear-gradient(135deg, #FFFFFF 0%, #FFF9FC 40%, #FAFAFF 100%);
   color: var(--charcoal);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -29,9 +34,56 @@ html, body {
   color: var(--white);
 }
 
-/* ---- Utilities ---- */
+/* ---------- Utilities ---------- */
 .sereno-gradient {
   background: linear-gradient(120deg, var(--mint), var(--lavender), var(--peach));
 }
+
 .sereno-text-gradient {
-  background: linear-gradient(120deg, var(--mint), var(--lavend
+  background: linear-gradient(120deg, var(--mint), var(--lavender), var(--peach));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--mint), var(--lavender), var(--peach));
+  color: #222222;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--gray);
+  color: var(--charcoal);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  border-color: var(--lavender);
+  color: var(--lavender);
+}
