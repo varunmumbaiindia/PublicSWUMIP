@@ -1,47 +1,84 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
 
-type T = { label: string; value: string };
+import { useEffect, useState } from "react";
 
-const pad = (n: number) => String(n).padStart(2, "0");
+type TimePart = {
+  label: string;
+  value: string;
+  aria: string;
+};
 
-export default function Countdown() {
-  // Target: 2026-01-01 00:00:00 IST (+05:30)
-  const target = useMemo(() => new Date("2026-01-01T00:00:00+05:30").getTime(), []);
-  const [now, setNow] = useState<number>(Date.now());
+const TARGET_TIMESTAMP = new Date("2026-01-01T00:00:00+05:30").getTime();
 
-  useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
+const pad = (value: number) => value.toString().padStart(2, "0");
 
-  const diff = Math.max(0, target - now);
-  const totalSeconds = Math.floor(diff / 1000);
-  const days = Math.floor(totalSeconds / (24 * 3600));
-  const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
+const getRemaining = () => Math.max(TARGET_TIMESTAMP - Date.now(), 0);
+
+const splitTime = (milliseconds: number) => {
+  const totalSeconds = Math.floor(milliseconds / 1000);
+
+  const days = Math.floor(totalSeconds / (24 * 60 * 60));
+  const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+  const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
   const seconds = totalSeconds % 60;
 
-  const parts: T[] = [
-    { label: "Days", value: String(days) },
-    { label: "Hours", value: pad(hours) },
-    { label: "Minutes", value: pad(minutes) },
-    { label: "Seconds", value: pad(seconds) },
+  return { days, hours, minutes, seconds };
+};
+
+export default function Countdown() {
+  const [remaining, setRemaining] = useState<number>(getRemaining);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRemaining(getRemaining());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const { days, hours, minutes, seconds } = splitTime(remaining);
+
+  const parts: TimePart[] = [
+    {
+      label: "Days",
+      value: days.toString(),
+      aria: `${days} day${days === 1 ? "" : "s"} remaining`,
+    },
+    {
+      label: "Hours",
+      value: pad(hours),
+      aria: `${hours} hour${hours === 1 ? "" : "s"} remaining`,
+    },
+    {
+      label: "Minutes",
+      value: pad(minutes),
+      aria: `${minutes} minute${minutes === 1 ? "" : "s"} remaining`,
+    },
+    {
+      label: "Seconds",
+      value: pad(seconds),
+      aria: `${seconds} second${seconds === 1 ? "" : "s"} remaining`,
+    },
   ];
 
   return (
-    <div className="mt-8 flex flex-wrap justify-center gap-4">
-      {parts.map((p) => (
-        <div
-          key={p.label}
-          className="glass rounded-2xl px-6 py-4 min-w-[110px] text-center shadow-soft border border-white/60"
-          style={{ background: "rgba(255,255,255,0.7)" }}
-          aria-label={`${p.label} remaining`}
-        >
-          <div className="text-3xl font-semibold text-[#2B2F33]">{p.value}</div>
-          <div className="text-xs tracking-wide text-[#6A6E73]">{p.label}</div>
-        </div>
-      ))}
+    <div className="w-full px-4">
+      <div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
+        {parts.map(({ label, value, aria }) => (
+          <div
+            key={label}
+            aria-label={aria}
+            className="flex flex-col items-center justify-center rounded-2xl border border-white/40 bg-white/20 p-6 text-center shadow-lg backdrop-blur-lg backdrop-saturate-150 dark:border-white/10 dark:bg-white/10"
+          >
+            <span className="text-3xl font-semibold tracking-tight text-slate-900 drop-shadow-sm dark:text-white sm:text-4xl">
+              {value}
+            </span>
+            <span className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-slate-600 dark:text-slate-200">
+              {label}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
